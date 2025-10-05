@@ -1,41 +1,29 @@
-🚀 Gerenciador de Tarefas | PRG04 - Programação Web
-Este projeto é um Gerenciador de Tarefas simples, desenvolvido como parte da disciplina de Programação Web para praticar as principais funcionalidades de front-end com HTML, CSS e JavaScript.
+# 🎮 GameLog | Maquete Estática
 
-✨ Funcionalidades
-O projeto permite que o usuário:
+Este projeto é uma maquete visual da plataforma GameLog, desenvolvido para praticar e aprimorar habilidades de front-end com **HTML e CSS externo**.
 
-Adicione novas tarefas à lista.
+O objetivo é construir a interface estática de uma plataforma de avaliação de jogos, focando em layout, estilização e estrutura semântica.
 
-Marque tarefas como concluídas, riscando o texto.
+---
 
-Exclua tarefas da lista.
+### ✨ Páginas Criadas
 
-Visualize um favicon personalizado na aba do navegador.
+O projeto é composto por 3 páginas estáticas interligadas:
 
-📁 Estrutura de Pastas
-A estrutura do projeto foi organizada para facilitar a navegação, manutenção e escalabilidade.
+* **Página Principal (`index.html`):** Apresenta uma grade com os jogos em destaque.
+* **Página de Detalhes (`detalhes-jogo.html`):** Mostra informações e reviews de um jogo específico.
+* **Página de Login (`login.html`):** Contém o formulário de acesso à plataforma.
 
-assets/: Contém todos os recursos estáticos e mídias.
+---
 
-    css/: Arquivos de estilo.
-    fonts/: Fontes personalizadas.
-    icons/: Ícones e o favicon do projeto.
-    images/: Imagens diversas.
-    js/: Arquivos JavaScript para lógica e interatividade.
+### 📁 Estrutura de Pastas
 
-components/: Módulos de código HTML reutilizáveis, como rodapés e cabeçalhos.
+A estrutura do projeto foi organizada para facilitar a navegação e manutenção dos arquivos estáticos.
 
-    footer/: Código do rodapé.
-    header/: Código do cabeçalho.
-    modals/: Estrutura de modais.
-
-pages/: Páginas HTML principais do site.
-
-    about/: Página "Sobre".
-    contact/: Página de contato.
-    home/: Página inicial.
-    atividade-3/: Arquivos da Atividade 3.
-
-vendors/: Bibliotecas e frameworks de terceiros (ex: Bootstrap, jQuery).
-
-index.html: A página principal e ponto de entrada da aplicação.
+-   **assets/:** Contém todos os recursos.
+    -   `css/`: Arquivos de estilo (`style.css`).
+    -   `images/`: Imagens dos jogos e de layout.
+    -   `icons/`: Ícones e o favicon.
+-   `index.html`: Página principal.
+-   `detalhes-jogo.html`: Página de detalhes.
+-   `login.html`: Página de login.
