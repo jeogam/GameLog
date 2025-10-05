@@ -1,27 +1,113 @@
+/* ==============================================
+   1. DEFINIÇÃO DA PALETA DE CORES (VARIÁVEIS)
+   ============================================== */
+
+:root {
+    /* Paleta "Neon Noturno" */
+    --cor-dominante: #0D1117;     /* Azul-escuro quase preto para o fundo */
+    --cor-secundaria: #21262D;    /* Cinza médio para cards e painéis */
+    --cor-destaque: #E839C2;      /* Magenta vibrante para botões e links */
+
+    /* Cores de Texto */
+    --cor-texto-principal: #F0F6FC; /* Branco levemente azulado para textos principais */
+    --cor-texto-secundario: #8B949E;/* Cinza claro para textos de apoio */
+    
+    /* Cores de Feedback */
+    --cor-sucesso: #28a745;
+    --cor-erro: #dc3545;
+    --cor-aviso: #ffc107;
+}
+
+
+/* ==============================================
+   2. ESTILOS GERAIS E RESET BÁSICO
+   ============================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e bordas não afetem o tamanho final do elemento */
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte mais moderna */
+    background-color: var(--cor-dominante);
+    color: var(--cor-texto-principal);
     line-height: 1.6;
-    margin: 20px;
 }
 
-h1, h2 {
-    color: #0056b3;
+
+/* ==============================================
+   3. ESTILOS DE TEXTO E LINKS
+   ============================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cor-texto-principal); /* Garante que os títulos sejam bem visíveis */
+    margin-bottom: 1rem;
 }
 
-video, audio {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+p {
+    color: var(--cor-texto-secundario); /* Parágrafos com uma cor mais suave */
+    margin-bottom: 1rem;
 }
 
 a {
-    color: #007BFF;
+    color: var(--cor-destaque); /* Links usam a cor de destaque para chamar atenção */
     text-decoration: none;
+    transition: all 0.2s ease-in-out; /* Transição suave para o hover */
 }
 
 a:hover {
     text-decoration: underline;
+    filter: brightness(1.2); /* Deixa o link um pouco mais brilhante ao passar o mouse */
+}
+
+
+/* ==============================================
+   4. ESTILOS PARA COMPONENTES DO GAMELOG
+   ============================================== */
+
+/* Estilo para um botão principal */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--cor-destaque);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+    box-shadow: 0px 0px 15px rgba(232, 57, 194, 0.5); /* Efeito de brilho neon */
+}
+
+
+/* Estilo para os cards de jogos */
+.game-card {
+    background-color: var(--cor-secundaria);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.game-card:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" o card */
+}
+
+.game-card img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.game-card h3 {
+    font-size: 1.2rem;
 }
