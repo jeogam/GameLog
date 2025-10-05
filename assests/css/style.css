@@ -26,11 +26,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e bordas não afetem o tamanho final do elemento */
+    box-sizing: border-box; 
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte mais moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     background-color: var(--cor-dominante);
     color: var(--cor-texto-principal);
     line-height: 1.6;
@@ -42,72 +42,23 @@ body {
    ============================================== */
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--cor-texto-principal); /* Garante que os títulos sejam bem visíveis */
+    color: var(--cor-texto-principal); 
     margin-bottom: 1rem;
 }
 
 p {
-    color: var(--cor-texto-secundario); /* Parágrafos com uma cor mais suave */
+    color: var(--cor-texto-secundario); 
     margin-bottom: 1rem;
 }
 
 a {
-    color: var(--cor-destaque); /* Links usam a cor de destaque para chamar atenção */
+    color: var(--cor-destaque); 
     text-decoration: none;
-    transition: all 0.2s ease-in-out; /* Transição suave para o hover */
+    transition: all 0.2s ease-in-out;
 }
 
 a:hover {
     text-decoration: underline;
-    filter: brightness(1.2); /* Deixa o link um pouco mais brilhante ao passar o mouse */
+    filter: brightness(1.2); 
 }
 
-
-/* ==============================================
-   4. ESTILOS PARA COMPONENTES DO GAMELOG
-   ============================================== */
-
-/* Estilo para um botão principal */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    color: #ffffff;
-    background-color: var(--cor-destaque);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.btn:hover {
-    filter: brightness(1.2);
-    box-shadow: 0px 0px 15px rgba(232, 57, 194, 0.5); /* Efeito de brilho neon */
-}
-
-
-/* Estilo para os cards de jogos */
-.game-card {
-    background-color: var(--cor-secundaria);
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-}
-
-.game-card:hover {
-    transform: translateY(-5px); /* Efeito de "levantar" o card */
-}
-
-.game-card img {
-    max-width: 100%;
-    border-radius: 6px;
-    margin-bottom: 12px;
-}
-
-.game-card h3 {
-    font-size: 1.2rem;
-}
