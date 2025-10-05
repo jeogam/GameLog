@@ -62,3 +62,109 @@ a:hover {
     filter: brightness(1.2); 
 }
 
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--cor-destaque);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.btn:hover {
+    filter: brightness(1.2);
+    box-shadow: 0px 0px 15px rgba(232, 57, 194, 0.5); /* Efeito de brilho neon */
+}
+
+
+
+
+/* Estilo para os cards de jogos */
+.game-card {
+    background-color: var(--cor-secundaria);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.game-card:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" o card */
+}
+
+
+.game-card img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+
+.game-card h3 {
+    font-size: 1.2rem;
+}
+
+/* Limita a largura do conteúdo principal e centraliza */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.main-header .container {
+    display: flex;
+    justify-content: space-between; /* Coloca o logo na esquerda e a navegação na direita */
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Seção de título */
+.section-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Grade de Jogos */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria uma grade responsiva */
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+/* Rodapé */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    background-color: var(--cor-secundaria);
+    border-top: 1px solid #30363d;
+}
+
+/* Estrelas de avaliação */
+.rating {
+    color: #ffc107; /* Cor amarela para as estrelas */
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
