@@ -67,6 +67,11 @@ a:hover {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.btn:hover {
+    background-color: #fd7de1;
 }
 
 /* ==============================================
@@ -114,4 +119,28 @@ footer {
     padding-top: 20px;
     text-align: center;
     font-size: 0.9rem;
+}
+
+/* ==============================================
+   6. ESTILO DO MENU HORIZONTAL (AULA 08)
+   ============================================== */
+
+/* Aplica o estilo aos itens da lista dentro do menu */
+nav#menu li {
+    display: inline-block; /* <-- ESSA É A REGRA PRINCIPAL */
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s; /* Efeito de transição suave */
+}
+
+/* Formata os links dentro do menu para terem a cor preta, como na Aula 08, página 13 */
+nav#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Efeito no link ao passar o mouse, como na Aula 08, página 14 */
+nav#menu a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
