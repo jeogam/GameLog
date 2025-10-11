@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 4 - Sandbox</title>
+    <title>GameLog - Atividade 4</title>
+    
     <link rel="shortcut icon" href="../../../assets/icons/favicon2.ico">
     <link rel="stylesheet" href="../../../assets/css/style.css">
 </head>
 <body>
-    <header id="cabecalho">
+    <div id="interface">
+        <header id="cabecalho">
             <h1 class="logo">🎮 GameLog</h1>
             <nav id="menu">
                 <ul>
-                    <li><a href="../../../index.html" class="btn">Home</a> </li>
+                    <li><a href="../sandbox.html" class="btn">Sandbox</a></li>
                     <li><a href="#" class="btn">Login</a></li>
-                    <li><a href="/pages/sandbox-atividades/sandbox.html" class="btn">Sandbox</a></li>
                 </ul>
             </nav>
         </header>
-    <h1>Atividade 4 - Sandbox</h1>
-    <p1>Atividade que contém áudio e video.</p1>
-
-    <h2>Áudio</h2>
-    <audio preload="metadata" controls>
-        <source src="../../../assets/audio/churrasqueira.mp3">
-        <p>Seu navegador não suporta áudio. <a href="../../../assets/audio/churrasqueira.mp3"
-            download="churrasqueira.mp3" type="audio/mpeg"></a></p>
-    </audio>
     
-    <h2>Video Externo</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/RhOwyHWGqWg?si=yNOtk8yGkLLdtpWr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <main>
+            <h1>Atividade 4: Mídia</h1>
+            <p>Esta atividade contém exemplos de áudio e vídeo responsivo.</p>
 
-    <br>
-    <a href="../../sandbox-atividades/sandbox.html">Voltar para a área SandBox</a>
+            <h2>Áudio</h2>
+            <audio preload="metadata" controls>
+                <source src="../../../assets/audio/churrasqueira.mp3">
+                <p>Seu navegador não suporta áudio.</p>
+            </audio>
+            
+            <h2>Vídeo Externo Responsivo</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/RhOwyHWGqWg?si=yNOtk8yGkLLdtpWr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </main>
 
+        <footer>
+            <p>&copy; 2025 GameLog. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>

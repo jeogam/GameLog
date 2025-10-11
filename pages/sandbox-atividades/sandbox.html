@@ -3,31 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandbox das Atividades</title>
-    <link rel="shortcut icon" href="../../assets/icons/favicon2.ico">
+    <title>GameLog - Sandbox das Atividades</title>
 
+    <link rel="shortcut icon" href="../../assets/icons/favicon2.ico">
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-    <header id="cabecalho">
+
+    <div id="interface">
+
+        <header id="cabecalho">
             <h1 class="logo">🎮 GameLog</h1>
             <nav id="menu">
                 <ul>
-                    <li><a href="../../index.html" class="btn">Home</a> </li>
                     <li><a href="#" class="btn">Login</a></li>
+                    <li><a href="../../index.html" class="btn">Home</a></li>
                 </ul>
             </nav>
         </header>
-    <h1>Sandbox das Atividades</h1>
-    <p1>Aqui ficará as os links para as atividades da disciplina Programação Web.</p1>
-    <br>
-    <a href="../../pages/sandbox-atividades/atividade-3/atividade-3.html">Ir para a Atividade 3</a>
-    <br>
-    <a href="../../pages/sandbox-atividades/atividade-4/atividade-4.html">Ir para a Atividade 4</a>
-    <br>
-    <a href="../../pages/sandbox-atividades/atividade-5/atividade-5.html">Ir para a Atividade 5</a>
 
-    <br>
-    <a href="../../index.html">Voltar à página inicial</a>
-</body>
+        <main>
+            <h1>Sandbox das Atividades</h1>
+            <p>Aqui estão as atividades da disciplina de Programação Web. Clique em um card para ver a atividade.</p>
+
+            <section class="activity-grid">
+
+                <a href="./atividade-3/atividade-3.html" class="activity-card">
+                    <img src="../../assets/images/atividade-3.png" alt="Thumbnail da Atividade 3">
+                    <h3>Atividade 3: Listas e Imagens</h3>
+                </a>
+
+                <a href="./atividade-4/atividade-4.html" class="activity-card">
+                    <img src="../../assets/images/atividade-4.png" alt="Thumbnail da Atividade 4">
+                    <h3>Atividade 4: Mídia e CSS</h3>
+                </a>
+
+                <a href="./atividade-5/atividade-5.html" class="activity-card">
+                    <img src="../../assets/images/atividade-5.png" alt="Thumbnail da Atividade 5">
+                    <h3>Atividade 5: Paleta de Cores</h3>
+                </a>
+
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 GameLog. Todos os direitos reservados.</p>
+        </footer>
+
+    </div> </body>
 </html>

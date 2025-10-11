@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 3</title>
+    <title>GameLog - Atividade 3</title>
     
     <link rel="shortcut icon" href="../../../assets/icons/favicon2.ico">
     <link rel="stylesheet" href="../../../assets/css/style.css">
 </head>
 <body>
-    <header id="cabecalho">
+    <div id="interface">
+        <header id="cabecalho">
             <h1 class="logo">🎮 GameLog</h1>
             <nav id="menu">
                 <ul>
-                    <li><a href="../../../index.html" class="btn">Home</a> </li>
                     <li><a href="#" class="btn">Login</a></li>
-                    <li><a href="/pages/sandbox-atividades/sandbox.html" class="btn">Sandbox</a></li>
+                    <li><a href="../../../index.html" class="btn">Home</a></li>
+                    <li><a href="../sandbox.html" class="btn">Sandbox</a></li>
                 </ul>
             </nav>
         </header>
-    <h1>Atividade 3</h1>
     
-    <h3>Minha Lista</h3>
-    <ul>
-        <li>Carro</li>
-        <li>Moto</li>
-        <li>Trem</li>
-    </ul>
+        <main>
+            <h1>Atividade 3</h1>
+            <h3>Minha Lista</h3>
+            <ul>
+                <li>Carro</li>
+                <li>Moto</li>
+                <li>Trem</li>
+            </ul>
+            
+            <h3>Imagem Dinâmica e Responsiva</h3>
+            <p>Esta imagem irá se ajustar ao tamanho da tela.</p>
+            <picture>
+                <source media="(max-width: 1050px)" srcset="../../../assets/images/cat-codando.png">
+                <img src="../../../assets/images/cat-codando.png" alt="Um gato programando em um computador.">
+            </picture>
+        </main>
 
-    <h3>Imagem Dinâmica</h3>
-    <picture>
-        <source media="(max-width: 1050px)" srcset="../../../assets/images/cat-codando.png">
-
-        <img src="../../../assets/images/cat-codando.png" alt="Um gato programando em um computador.">
-    </picture>
-
-
-    <br>
-    <a href="../../sandbox-atividades/sandbox.html">Voltar para a área SandBox</a>
+        <footer>
+            <p>&copy; 2025 GameLog. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>
