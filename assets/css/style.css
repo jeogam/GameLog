@@ -266,3 +266,71 @@ img {
     border: 1px solid #30363d;
     border-radius: 8px;
 }
+
+/* ==============================================
+   11. ESTILOS DE FORMULÁRIO E TABELA (AULA 09)
+   ============================================== */
+
+/* -- Formulário de Login -- */
+.login-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-dominante);
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+}
+
+/* -- Tabela de Admin -- */
+.admin-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse; /* Remove o espaço entre as células */
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #30363d;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-table thead {
+    background-color: var(--cor-dominante);
+}
+
+.admin-table th {
+    font-weight: bold;
+}
+
+/* Botões de Ação na Tabela */
+.btn-action {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+    color: white;
+}
+
+.btn-action.edit {
+    background-color: #007BFF; /* Azul */
+}
+
+.btn-action.delete {
+    background-color: #DC3545; /* Vermelho */
+}
