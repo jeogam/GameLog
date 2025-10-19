@@ -11,7 +11,7 @@
 }
 
 /* ==============================================
-   2. ESTILOS GERAIS E RESET BÁSICO
+   2. ESTILOS GERAIS E RESET BÁSICO (MOBILE-FIRST)
    ============================================== */
 
 * {
@@ -20,6 +20,7 @@
     box-sizing: border-box; 
 }
 
+/* Estilos base (Mobile) */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     background-color: var(--cor-dominante);
@@ -28,7 +29,7 @@ body {
 }
 
 /* ==============================================
-   3. ESTILOS DE TEXTO E LINKS
+   3. ESTILOS DE TEXTO E LINKS (MOBILE-FIRST)
    ============================================== */
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,7 +54,7 @@ a:hover {
 }
 
 /* ==============================================
-   4. ESTILOS PARA COMPONENTES
+   4. ESTILOS PARA COMPONENTES (MOBILE-FIRST)
    ============================================== */
 
 .btn {
@@ -75,14 +76,13 @@ a:hover {
 }
 
 /* ==============================================
-   5. REGRAS DE LAYOUT COM IDs (BASEADO NOS SLIDES)
+   5. REGRAS DE LAYOUT (MOBILE-FIRST)
    ============================================== */
 
-/* Caixa principal que centraliza o conteúdo */
+/* Caixa principal (Mobile) */
 div#interface {
-    width: 90%; /* Usamos porcentagem para ser mais flexível */
-    max-width: 900px; /* Largura máxima em telas grandes */
-    min-width: 320px; /* Largura mínima para evitar que o layout quebre em telas muito pequenas */
+    width: 90%; /* Flexível para telas pequenas */
+    min-width: 320px;
     margin: 20px auto;
     padding: 20px;
     background-color: var(--cor-secundaria);
@@ -90,31 +90,25 @@ div#interface {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Organiza o cabeçalho */
+/* Cabeçalho (Mobile) - Itens empilhados (column) */
 header#cabecalho {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Padrão 'column' para mobile (Aula 10, pg 20) */
+    align-items: center; /* Centraliza no mobile */
     border-bottom: 1px solid #30363d;
     margin-bottom: 40px;
     padding-bottom: 20px;
 }
 
-/* Estilo para o menu usando seletor descendente, como na Aula 07 */
-nav#menu ul {
-    list-style: none; /* Esconde a bolinha da lista */
+header#cabecalho h1.logo {
+    margin-bottom: 20px;
 }
 
-/* Estilo para a seção do link da sandbox */
-.sandbox-link {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: var(--cor-dominante); /* Cor um pouco diferente para destacar */
-    border-radius: 8px;
+main, .sandbox-link {
     text-align: center;
 }
 
-/* Estilo para o rodapé */
+/* Rodapé (Mobile) */
 footer {
     border-top: 1px solid #30363d;
     margin-top: 40px;
@@ -124,64 +118,45 @@ footer {
 }
 
 /* ==============================================
-   6. ESTILO DO MENU HORIZONTAL (AULA 08)
+   6. ESTILO DO MENU (MOBILE-FIRST)
    ============================================== */
 
-/* Aplica o estilo aos itens da lista dentro do menu */
-nav#menu li {
-    display: inline-block; /* <-- ESSA É A REGRA PRINCIPAL */
-    padding: 10px;
-    margin: 2px;
-    transition: background-color 1s; /* Efeito de transição suave */
+nav#menu ul {
+    list-style: none;
+    text-align: center;
 }
 
-/* Formata os links dentro do menu para terem a cor preta, como na Aula 08, página 13 */
+/* Menu (Mobile) - Itens empilhados (block) */
+nav#menu li {
+    display: block; /* Padrão 'block' para menu vertical no mobile */
+    padding: 10px;
+    margin: 2px 0;
+    transition: background-color 1s;
+}
+
 nav#menu a {
     color: black;
     text-decoration: none;
 }
 
-/* Efeito no link ao passar o mouse, como na Aula 08, página 14 */
 nav#menu a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
 
 /* ==============================================
-   7. REGRAS DE RESPONSIVIDADE (AULA 08)
+   8. ESTILOS DA PÁGINA SANDBOX (JÁ RESPONSIVO)
    ============================================== */
 
-/* Para telas com largura máxima de 600px (celulares) */
-@media (max-width: 600px){
-    header#cabecalho {
-        flex-direction: column;
-    }
-
-    header#cabecalho h1.logo {
-        margin-bottom: 20px;
-    }
-
-    main, .sandbox-link {
-        text-align: center;
-    }
-}
-
-/* ==============================================
-   8. ESTILOS DA PÁGINA SANDBOX
-   ============================================== */
-
-/* Justificativa (Responsividade - Aula 08): Usamos 'display: grid' para criar uma grade.
-   A função 'repeat(auto-fit, ...)' cria colunas responsivas: o navegador
-   cria quantas colunas de 250px couberem na tela, se adaptando automaticamente. */
+/* Esta grade já é responsiva e se alinha com o Mobile First,
+   pois 'auto-fit' e 'minmax' se adaptam a qualquer tamanho. */
 .activity-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 20px;
     margin-top: 40px;
 }
 
-/* Justificativa (Modelo de Caixas - Aula 07): O card é a "caixa" que agrupa a imagem e o título.
-   Usamos padding para o espaçamento interno e um hover para interatividade. */
 .activity-card {
     background-color: var(--cor-dominante);
     border: 1px solid #30363d;
@@ -192,11 +167,9 @@ nav#menu a:hover {
     text-decoration: none; 
 }
 
-/* Justificativa (Pseudo-classe - Aula 07): O ':hover' adiciona um efeito visual quando o
-   mouse passa sobre o card, melhorando a experiência do usuário. */
 .activity-card:hover {
-    transform: translateY(-5px); /* Efeito de "levantar" o card */
-    box-shadow: 0px 5px 15px rgba(232, 57, 194, 0.2); /* Sombra neon */
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(232, 57, 194, 0.2);
 }
 
 .activity-card img {
@@ -211,28 +184,25 @@ nav#menu a:hover {
 }
 
 /* ==============================================
-   9. ESTILOS PARA MÍDIA RESPONSIVA
+   9. ESTILOS PARA MÍDIA RESPONSIVA (MOBILE-FIRST)
    ============================================== */
 
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* Remove pequenos espaços em branco que às vezes aparecem embaixo da imagem */
-    margin: 20px 0; /* Adiciona um espaço em cima e embaixo da imagem */
+    display: block;
+    margin: 20px 0;
 }
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção de 16:9 para vídeos widescreen */
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
     margin: 20px 0;
-    border-radius: 8px; /* Borda arredondada para combinar com o design */
+    border-radius: 8px;
 }
 
-/* Justificativa (Aula 08, páginas 7-8): O <iframe> dentro da caixa é posicionado de forma
-   'absolute' para preencher 100% do espaço criado pelo padding do container.
-   Isso faz com que o vídeo se estique ou encolha perfeitamente junto com a caixa. */
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -245,21 +215,17 @@ img {
    10. ESTILOS DA PÁGINA DE PALETA DE CORES
    ============================================== */
 
-/* Justificativa (Modelo de Caixas - Aula 07): Define o espaçamento para as seções
-   de informação de cor, mantendo o código organizado. */
 .color-info {
     margin-top: 40px;
 }
 
-/* Agrupa as amostras de cor lado a lado */
 .swatch-container {
     display: flex;
-    gap: 10px; /* Espaçamento entre as caixas */
+    flex-wrap: wrap; /* Permite quebrar a linha em telas pequenas */
+    gap: 10px;
     margin-top: 10px;
 }
 
-/* Justificativa (Modelo de Caixas - Aula 07): Estiliza as "caixas" que mostram as
-   cores da paleta, definindo seu tamanho, borda e espaçamento. */
 .color-swatch {
     width: 100px;
     height: 100px;
@@ -268,10 +234,10 @@ img {
 }
 
 /* ==============================================
-   11. ESTILOS DE FORMULÁRIO E TABELA (AULA 09)
+   11. ESTILOS DE FORMULÁRIO E TABELA (MOBILE-FIRST)
    ============================================== */
 
-/* -- Formulário de Login -- */
+/* -- Formulário de Login (Mobile) -- */
 .login-form {
     margin-top: 30px;
 }
@@ -296,28 +262,46 @@ img {
     font-size: 1rem;
 }
 
-/* -- Tabela de Admin -- */
+/* -- Tabela de Admin (Mobile) -- */
+/* Para mobile, forçamos a tabela a se comportar como 'blocos'
+   para evitar a barra de rolagem horizontal. */
 .admin-table {
     width: 100%;
     margin-top: 30px;
-    border-collapse: collapse; /* Remove o espaço entre as células */
-}
-
-.admin-table th, .admin-table td {
-    border: 1px solid #30363d;
-    padding: 12px;
-    text-align: left;
+    border-collapse: collapse;
 }
 
 .admin-table thead {
-    background-color: var(--cor-dominante);
+    /* Esconde o cabeçalho no mobile (mostraremos os labels via CSS) */
+    display: none; 
 }
 
-.admin-table th {
+.admin-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #30363d;
+}
+
+.admin-table td {
+    display: block;
+    padding: 12px;
+    text-align: right; /* Alinha o valor à direita */
+    border-bottom: 1px solid #30363d;
+}
+
+.admin-table td:last-child {
+    border-bottom: none;
+}
+
+/* Adiciona o label (cabeçalho) antes do dado */
+.admin-table td[data-label]::before {
+    content: attr(data-label);
+    float: left;
     font-weight: bold;
+    text-align: left;
 }
 
-/* Botões de Ação na Tabela */
+/* Botões de Ação na Tabela (Mobile) */
 .btn-action {
     display: inline-block;
     padding: 5px 10px;
@@ -333,4 +317,62 @@ img {
 
 .btn-action.delete {
     background-color: #DC3545; /* Vermelho */
+}
+
+
+/* ==============================================
+   7. REGRAS DE RESPONSIVIDADE (AULA 10 - MOBILE FIRST)
+   ============================================== */
+
+/* * Breakpoint para Tablets e Desktops (Telas maiores que 768px)
+ * Aqui "adicionamos" estilos para telas maiores[cite: 252, 258, 579].
+ */
+@media (min-width: 768px) {
+
+    /* Layout */
+    div#interface {
+        max-width: 900px; /* Define uma largura máxima em telas maiores */
+    }
+
+    /* Cabeçalho (Desktop) */
+    header#cabecalho {
+        flex-direction: row; /* Volta a ser 'row' (Aula 10, pg 20) */
+        justify-content: space-between; /* Espaça o logo e o menu */
+    }
+
+    header#cabecalho h1.logo {
+        margin-bottom: 0;
+    }
+
+    main, .sandbox-link {
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    /* Menu (Desktop) */
+    nav#menu li {
+        display: inline-block; /* Menu horizontal */
+        margin: 2px;
+    }
+
+    /* Tabela (Desktop) */
+    .admin-table thead {
+        display: table-header-group; /* Mostra o cabeçalho novamente */
+    }
+
+    .admin-table tr {
+        display: table-row; /* Volta ao comportamento padrão de tabela */
+        margin-bottom: 0;
+        border: none;
+    }
+
+    .admin-table td {
+        display: table-cell; /* Volta ao comportamento padrão de tabela */
+        text-align: left;
+        border: 1px solid #30363d;
+    }
+
+    .admin-table td[data-label]::before {
+        content: ""; /* Esconde os labels '::before' no desktop */
+        display: none;
+    }
 }
