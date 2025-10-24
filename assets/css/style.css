@@ -328,3 +328,49 @@ img {
         display: none;
     }
 }
+
+/* ==============================================
+   ESTILOS ADICIONAIS PARA CARDS BOOTSTRAP
+   ============================================== */
+
+/* Justificativa: A classe .card do Bootstrap[BOOTSTRAP].pdf] por padrão tem fundo claro.
+   Sobrescrevemos isso para usar a cor secundária do nosso tema escuro.
+   Também ajustamos a borda e a cor padrão do texto dentro do card. */
+.card {
+    background-color: var(--cor-secundaria); /* Define o fundo do card com sua cor secundária */
+    border: 1px solid #30363d;             /* Adiciona uma borda sutil que combina com o tema */
+    color: var(--cor-texto-principal);     /* Garante que o texto padrão dentro do card seja claro */
+}
+
+/* Garante que o título do card use a cor principal do texto do tema */
+.card-title {
+     color: var(--cor-texto-principal);
+}
+
+/* Opcional: Garante que o corpo do card use a cor secundária, mesmo se você remover o 'bg-dark' do HTML */
+.card-body {
+     background-color: var(--cor-secundaria); 
+}
+
+/* ==============================================
+   AJUSTES DE COR PARA COMPONENTES BOOTSTRAP
+   ============================================== */
+
+/* Justificativa: Sobrescreve a cor padrão do Bootstrap '.text-muted'[BOOTSTRAP].pdf]
+   quando ele está dentro de um elemento .card do nosso tema.
+   Usamos a variável '--cor-texto-secundario' que já definimos,
+   garantindo que o texto "muted" tenha contraste suficiente no fundo escuro. */
+.card .text-muted {
+    color: var(--cor-texto-secundario) !important; /* Usamos a nossa cor secundária de texto */
+}
+
+/* Opcional: Ajuste para as estrelas, se necessário */
+.card .card-text {
+    color: var(--cor-texto-principal); /* Garante que o texto normal do card seja branco */
+}
+.card .card-text.text-muted {
+    color: var(--cor-texto-secundario) !important; /* Reforça a cor para o gênero */
+}
+.card p.card-text:last-of-type { /* Seleciona o parágrafo da avaliação */
+    color: #ffc107; /* Cor amarela para estrelas, ou use a cor desejada */
+}
