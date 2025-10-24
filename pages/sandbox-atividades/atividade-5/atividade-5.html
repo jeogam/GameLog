@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameLog - Atividade 5</title>
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../../assets/css/style.css"> 
+    
     <link rel="shortcut icon" href="../../../assets/icons/favicon2.ico">
-    <link rel="stylesheet" href="../../../assets/css/style.css">
 </head>
 <body>
+    <div class="container"> 
 
-    <div id="interface">
-
-        <header id="cabecalho">
-            <h1 class="logo">🎮 GameLog</h1>
-            <nav id="menu">
-                <ul>
-                    <li><a href="../../../index.html" class="btn">Home</a></li>
-                    <li><a href="../sandbox.html" class="btn">Voltar</a></li>
-                </ul>
-            </nav>
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="../../../index.html">🎮 GameLog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-secondary" href="../sandbox.html">Voltar</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
     
         <main>
@@ -47,10 +55,10 @@
             <div class="color-info">
                 <h3>Tipo de Paleta</h3>
                 <p>O tipo de paleta adotado é uma **Paleta de Contraste em Modo Escuro**:</p>
-                <ul>
-                    <li><strong>Cor Dominante (#0D1117):</strong> Azul quase preto para o fundo.</li>
-                    <li><strong>Cor Secundária (#21262D):</strong> Cinza-escuro para elementos em primeiro plano.</li>
-                    <li><strong>Cor de Destaque (#E839C2):</strong> O magenta para guiar a atenção.</li>
+                <ul class="list-group list-group-flush mb-3"> 
+                    <li class="list-group-item bg-transparent text-light"><strong>Cor Dominante (#0D1117):</strong> Azul quase preto para o fundo.</li>
+                    <li class="list-group-item bg-transparent text-light"><strong>Cor Secundária (#21262D):</strong> Cinza-escuro para elementos em primeiro plano.</li>
+                    <li class="list-group-item bg-transparent text-light"><strong>Cor de Destaque (#E839C2):</strong> O magenta para guiar a atenção.</li>
                 </ul>
                 <div class="swatch-container">
                     <div class="color-swatch" style="background-color: #0D1117;"></div>
@@ -64,5 +72,7 @@
             <p>&copy; 2025 GameLog. Todos os direitos reservados.</p>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
