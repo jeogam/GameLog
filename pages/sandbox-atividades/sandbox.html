@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameLog - Sandbox das Atividades</title>
-
-    <link rel="shortcut icon" href="../../assets/icons/favicon2.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    
     <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <link rel="shortcut icon" href="../../assets/icons/favicon2.ico">
 </head>
 <body>
 
-    <div id="interface">
+    <div class="container"> 
 
-        <header id="cabecalho">
-            <h1 class="logo">🎮 GameLog</h1>
-            <nav id="menu">
-                <ul>
-                    <li><a href="../../index.html" class="btn">Voltar</a></li>
-                </ul>
-            </nav>
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+            
+            <div class="container-fluid">
+                
+                <a class="navbar-brand logo" href="../../index.html">🎮 GameLog</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    
+                    <ul class="navbar-nav ms-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-secondary" href="../../index.html">Voltar</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
         <main>
@@ -26,22 +42,18 @@
             <p>Aqui estão as atividades da disciplina de Programação Web. Clique em um card para ver a atividade.</p>
 
             <section class="activity-grid">
-
                 <a href="./atividade-3/atividade-3.html" class="activity-card">
                     <img src="../../assets/images/atividade-3.png" alt="Thumbnail da Atividade 3">
                     <h3>Atividade 3: Listas e Imagens</h3>
                 </a>
-
                 <a href="./atividade-4/atividade-4.html" class="activity-card">
                     <img src="../../assets/images/atividade-4.png" alt="Thumbnail da Atividade 4">
                     <h3>Atividade 4: Mídia e CSS</h3>
                 </a>
-
                 <a href="./atividade-5/atividade-5.html" class="activity-card">
                     <img src="../../assets/images/atividade-5.png" alt="Thumbnail da Atividade 5">
                     <h3>Atividade 5: Paleta de Cores</h3>
                 </a>
-
             </section>
         </main>
         
@@ -49,5 +61,8 @@
             <p>&copy; 2025 GameLog. Todos os direitos reservados.</p>
         </footer>
 
-    </div> </body>
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
 </html>
