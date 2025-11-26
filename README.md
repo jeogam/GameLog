@@ -1,59 +1,53 @@
 # 🎮 GameLog | Maquete Estática
 
-Este projeto é a maquete visual da plataforma GameLog, desenvolvido para praticar e aprimorar habilidades de front-end com HTML e CSS externo.
-
-O objetivo é construir a interface estática de uma plataforma de avaliação de jogos, focando em layout, estilização e estrutura semântica como a primeira fase de um projeto full-stack maior.
-
----
-
-### ✨ Páginas Criadas (Fase Atual)
-
-O projeto é composto por 3 páginas estáticas interligadas:
-
-* **Página Principal (`index.html`):** Apresenta uma grade com os jogos em destaque.
-* **Página de Detalhes (`detalhes-jogo.html`):** Mostra informações e reviews de um jogo específico.
-* **Página de Login (`login.html`):** Contém o formulário de acesso à plataforma.
+> **Disciplina:** PRG04 - Programação Web  
+> **Foco:** Desenvolvimento de Interface Estática (HTML5 & CSS3)  
+> **Status:** ✅ Concluído (Fase de Maquete)
 
 ---
 
-### 📁 Estrutura de Pastas
+## 📄 Sobre o Projeto
 
-A estrutura do projeto foi organizada para facilitar a navegação e manutenção dos arquivos estáticos.
+O **GameLog** é a maquete visual de uma plataforma de avaliação e catalogação de jogos.
 
--   **assets/:** Contém todos os recursos.
-    -   `css/`: Arquivos de estilo (`style.css`).
-    -   `images/`: Imagens dos jogos e de layout.
-    -   `icons/`: Ícones e o favicon.
--   `index.html`: Página principal.
--   `detalhes-jogo.html`: Página de detalhes.
--   `login.html`: Página de login.
+Este projeto foi desenvolvido como atividade prática para a disciplina de Programação Web, com o objetivo exclusivo de aplicar conceitos fundamentais de **Front-end** sem o uso de frameworks ou bibliotecas externas. O foco está na estruturação semântica, estilização via CSS externo e organização de layout.
+
+Embora seja um projeto estático, a interface foi desenhada pensando na experiência do usuário para um futuro sistema completo de reviews e backlog de games.
 
 ---
 
-🚀 Roadmap Futuro (Próximas Fases)
-Conforme novas tecnologias (JavaScript, Back-end, Banco de Dados) forem estudadas, o projeto evoluirá para implementar as seguintes funcionalidades:
+## ✨ Páginas Desenvolvidas
 
--    **Catálogo de Jogos Dinâmico:**
+O projeto consiste em 3 telas principais interligadas:
 
-    -    Integração com uma API de games (RAWG/IGDB) para criar uma base de dados vasta e organizada, eliminando a necessidade de cadastro manual de jogos.
+* **🏠 Página Principal (`index.html`):** Apresenta o catálogo de jogos em destaque utilizando Grid Layout.
+* **🔍 Página de Detalhes (`detalhes-jogo.html`):** Interface para visualização de informações do jogo (sinopse, capa) e área reservada para reviews.
+* **👤 Página de Login (`login.html`):** Formulário estilizado para acesso à plataforma.
 
--    **Autenticação e Perfil de Jogador:**
+---
 
-    -    Sistema de Cadastro e Login funcional.
-    -    Página de Perfil personalizada com seções para Jogos Favoritos, Estatísticas (jogos zerados, gênero preferido, nota média) e Atividade Recente.
+## 🛠 Tecnologias Utilizadas
 
--    **Sistema de Avaliação e Diário ("Log"):**
+* **HTML5:** Estrutura semântica (`header`, `main`, `section`, `footer`).
+* **CSS3:**
+    * Estilização externa (`style.css`).
+    * Flexbox e Grid para responsividade e layout.
+    * Uso de variáveis para paleta de cores.
+* **Git:** Controle de versão.
 
-    -    Funcionalidade para dar notas de 1 a 5 estrelas e escrever reviews.
-    -    Sistema para marcar o status de cada jogo: "Quero Jogar", "Estou Jogando", "Jogado/Zerado", "Desisti".
-    -    Diário de Bordo para registrar anotações de sessões de jogo com data.
+---
 
--    **Listas de Jogos (Curadoria e Social):**
+## 📁 Estrutura de Pastas
 
-    -    Ferramenta para usuários criarem e compartilharem listas públicas e temáticas de jogos.
-    -    Implementação de interações sociais como curtir e comentar nas listas.
+A organização dos arquivos segue o padrão de separação de assets para facilitar a manutenção:
 
--    **Busca e Descoberta:**
-
-    -    Mecanismo de busca funcional por nome do jogo.
-    -    Filtros avançados para explorar o catálogo por Plataforma, Gênero, Ano de Lançamento e Nota Média da comunidade.
+```bash
+GameLog/
+├── assets/
+│   ├── css/
+│   │   └── style.css      # Folha de estilos principal
+│   ├── images/            # Capas de jogos e imagens do layout
+│   └── icons/             # Ícones da interface e favicon
+├── index.html             # Tela Inicial
+├── detalhes-jogo.html     # Tela de Detalhes
+└── login.html             # Tela de Login
